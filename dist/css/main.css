@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 92px;
+  margin-top: 24px;
+  margin-left: 48px;
+}
+@media (max-width: 768px) {
+  .header__left {
+    margin: 0;
+    gap: 20px;
+  }
+}
+.header__left--blue-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #41C2D5;
+  border-radius: 20px;
+}
+.header__left--language-help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .header__left--language-help {
+    gap: 12px;
+  }
+}
+.header__left--language-help__language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.header__left--language-help__language img {
+  width: 20px;
+  height: 12px;
+  padding-right: 4px;
+}
+.header__left--language-help__language i {
+  font-size: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.header__left--language-help__help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .header__left--language-help__help p {
+    display: none;
+  }
+}
+.header__left--language-help__help .question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 15px;
+  height: 15px;
+  border: solid 1.5px;
+  font-size: 7px;
+  margin-right: 4px;
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  .header__left--language-help__help .question {
+    margin-right: 7px;
+  }
+}
+.header__left--language-help__help .arrow {
+  font-size: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: 48px;
+  padding-top: 6px;
+}
+@media (max-width: 768px) {
+  .header__right {
+    margin-top: 0;
+    margin-right: 0;
+    padding-top: 0;
+  }
+}
+.header__right i {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .header__right i {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header__right p {
+    display: none;
+  }
+}
+
+body {
+  background-color: #E5E5E5;
+  height: 100vh;
+  line-height: 1;
+  font-family: "Source Sans Pro";
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 54px;
+}
+@media (max-width: 768px) {
+  header {
+    width: 360px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+}
+header p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .main__heading {
+  margin-left: 132px;
+  margin-bottom: 32px;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  main .main__heading {
+    margin-left: 20px;
+  }
+}
+main h1 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=main.css.map */

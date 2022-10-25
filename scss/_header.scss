@@ -1,0 +1,120 @@
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin arrwoIcon {
+    font-size: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header__left {
+    @include flexCenter(row);
+    gap: 92px;
+    margin-top: 24px;;
+    margin-left: 48px;
+
+    @include mobile {
+        margin: 0;
+        gap: 20px;
+    }
+
+    &--blue-circle {
+        width: 40px;
+        height: 40px;
+        background-color: $primary-color;
+        border-radius: 20px;
+    }
+
+    &--language-help {
+        @include flexCenter(row);
+        gap: 24px;
+
+        @include mobile {
+            gap: 12px;
+        }
+
+        &__language {
+            @include flexCenter(row);
+
+            img {
+                width: 20px;
+                height: 12px;
+                padding-right: 4px;
+            }
+
+            i {
+                @include arrwoIcon;
+            } 
+        }
+
+        &__help {
+            @include flexCenter(row);
+
+            p {
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            .question {
+                @include flexCenter(row);
+                width: 15px;
+                height: 15px;
+                border: solid 1.5px;
+                font-size: 7px;
+                margin-right: 4px;
+                border-radius: 50px;
+
+                @include mobile {
+                    margin-right: 7px;
+                }
+            }
+
+            .arrow {
+                @include arrwoIcon;
+            }
+        }
+    }
+}
+
+.header__right {
+    @include flexCenter(row);
+    gap: 4px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: 48px;
+    padding-top: 6px;
+
+    @include mobile {
+        margin-top: 0;
+        margin-right: 0;
+        padding-top: 0;
+    }
+
+    i {
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
