@@ -244,12 +244,10 @@
   }
 }
 @media (max-width: 768px) {
-  .main__menu .mobile-text {
-    display: flex;
-  }
-}
-@media (max-width: 768px) {
   .main__menu .mobile-number__active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     font-weight: 700;
@@ -263,6 +261,9 @@
 }
 @media (max-width: 768px) {
   .main__menu .mobile-number__grey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     font-weight: 700;
