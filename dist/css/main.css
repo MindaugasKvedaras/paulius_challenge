@@ -122,6 +122,165 @@
   }
 }
 
+.main__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 42px;
+  margin-left: 132px;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .main__menu {
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .main__menu__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+  }
+}
+.main__menu__items--item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 358px;
+  height: 52px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0;
+  color: #253341;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .main__menu__items--item {
+    flex-direction: column;
+    font-size: 13px;
+    width: 77px;
+    background-color: #E5E5E5;
+    text-align: center;
+  }
+}
+.main__menu i {
+  font-size: 18px;
+  margin-left: auto;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .main__menu i {
+    display: none;
+  }
+}
+.main__menu .active {
+  background-color: #41C2D5;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .main__menu .active {
+    background-color: #E5E5E5;
+    color: #253341;
+  }
+}
+.main__menu__information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.main__menu__information--box {
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+  border: 1px solid #41C2D5;
+  border-radius: 4px;
+  width: 358px;
+  background-color: rgba(65, 194, 213, 0.12);
+}
+.main__menu__information--box p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #253341;
+  margin: 0;
+}
+.main__menu__information--box p span {
+  font-weight: 700;
+  color: #253341;
+}
+.main__menu__information--box .icon1 {
+  width: 46px;
+  height: 20px;
+  background-color: #41C2D5;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+.main__menu__information--box .icon2 {
+  width: 28px;
+  height: 20px;
+  background-color: #41C2D5;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+.main__menu .mobile-text {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main__menu .desktop-text {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .main__menu .mobile-text {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .main__menu .mobile-number__active {
+    width: 24px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 4px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #41C2D5;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .main__menu .mobile-number__grey {
+    width: 24px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 4px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+    color: #253341;
+  }
+}
+@media (max-width: 768px) {
+  .main__menu .faint-text {
+    color: rgba(37, 51, 65, 0.64);
+  }
+}
+
 body {
   background-color: #E5E5E5;
   height: 100vh;
@@ -137,6 +296,7 @@ header {
   width: 100%;
   margin: auto;
   margin-bottom: 54px;
+  color: #253341;
 }
 @media (max-width: 768px) {
   header {
@@ -173,6 +333,7 @@ main h1 {
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
+  color: #253341;
 }
 @media (max-width: 768px) {
   main h1 {

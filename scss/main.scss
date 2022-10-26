@@ -2,6 +2,7 @@
 @import "resets";
 @import "variables";
 @import "header";
+@import "menu";
 
 @mixin mobile {
   @media (max-width: $mobile) {
@@ -37,6 +38,7 @@ header {
     width: 100%;
     margin: auto;
     margin-bottom: 54px;
+    color: $text-color;
 
     @include mobile {
       width: 360px;
@@ -67,6 +69,7 @@ main {
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
+    color: $text-color;
 
     @include mobile {
       font-size: 24px;

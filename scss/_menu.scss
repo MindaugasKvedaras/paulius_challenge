@@ -1,0 +1,170 @@
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+  }
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin icon($width) {
+    width: $width;
+    height: 20px;
+    background-color: $primary-color;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 8px;
+    margin-top: 6px;
+    border-radius: 50%;
+}
+
+@mixin mobileNumber($color) {
+    width: 24px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 4px;
+    color: #ffffff;
+    text-align: center;
+    background-color: $color;
+    border-radius: 50%;
+}
+
+.main__menu{
+    @include flexCenter(column);
+    gap: 42px;
+    margin-left: 132px;
+    margin-right: auto;
+
+    @include mobile {
+        margin: auto; 
+    }
+
+    &__items {
+        @include mobile {
+            @include flexCenter(row);
+            gap: 4px;
+        }    
+    }
+
+
+    &__items--item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 358px;
+        height: 52px;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 4px;
+        padding:  12px;
+        margin: 0;
+        color: $text-color;
+        cursor: pointer;
+
+        @include mobile {
+            flex-direction: column;
+            font-size: 13px;
+            width: 77px;
+            background-color: $background;
+            text-align: center;
+        }
+    }
+
+    i {
+        font-size: 18px;
+        margin-left: auto;
+        color: #ffffff;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .active {
+        background-color: $primary-color;
+        color: #ffffff;
+
+        @include mobile {
+            background-color: $background;
+            color: $text-color;
+        }
+    }
+
+    &__information {
+        @include flexCenter(column);
+        gap: 12px;
+
+        &--box {
+            display: flex;
+            padding: 12px;
+            gap: 8px;
+            border: 1px solid $primary-color;
+            border-radius: 4px;
+            width: 358px;
+            background-color: rgba(65, 194, 213, 0.12);
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $text-color;
+                margin: 0;
+
+                span {
+                    font-weight: 700;
+                    color: $text-color
+                }
+            }
+
+            .icon1 {
+                @include icon(46px);
+            }
+
+            .icon2 {
+                @include icon(28px);
+            }
+        }
+
+    }
+
+    .mobile-text {
+        display: none;
+    }
+
+    .desktop-text {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .mobile-text {
+        @include mobile {
+            display: flex;
+        }
+    }
+
+    .mobile-number__active {
+        @include mobile {
+            @include mobileNumber($primary-color)
+        }
+    }
+
+    .mobile-number__grey {
+        @include mobile {
+            @include mobileNumber($mobile-number);
+            color: $text-color;
+        }
+    }
+
+    .faint-text {
+        @include mobile {
+            color: $faint-text;
+        }
+    }
+
+}
