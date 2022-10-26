@@ -235,7 +235,7 @@
   margin-top: 6px;
   border-radius: 50%;
 }
-.main__menu .mobile-text {
+.main__menu .mobile-number__active, .main__menu .mobile-number__grey {
   display: none;
 }
 @media (max-width: 768px) {
