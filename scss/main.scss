@@ -29,7 +29,7 @@
 
 body {
     background-color: $background;
-    height: 100vh;
+    // height: 100vh;
     line-height: 1;
     font-family: 'Source Sans Pro';
 
@@ -46,7 +46,7 @@ header {
     color: $text-color;
 
     @include mobile {
-      width: 360px;
+      width: 340px;
       height: 64px;
       margin-bottom: 20px;
     }
@@ -58,6 +58,10 @@ header {
 
 main {
   @include flexCenter(column);
+
+  @include mobile {
+    width: 100%;
+  }
 
   .main__heading {
     margin-left: 132px;
@@ -87,7 +91,11 @@ main {
 
     @include mobile {
       @include flexCenter(column);
-      width: 100%;
+      gap: 30px;
+      width: 370px;
+      margin: auto;
+      // position: relative;
+      // width: 100%;
 
     }
   }
