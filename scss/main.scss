@@ -3,6 +3,7 @@
 @import "variables";
 @import "header";
 @import "menu";
+@import "form";
 
 @mixin mobile {
   @media (max-width: $mobile) {
@@ -31,6 +32,10 @@ body {
     height: 100vh;
     line-height: 1;
     font-family: 'Source Sans Pro';
+
+    @include mobile {
+      background-color: #ffffff;
+    }
   }
 
 header {
@@ -60,9 +65,9 @@ main {
     margin-right: auto;
 
     @include mobile {
-      margin-left: 20px;
+      margin-left: 32px;
+      width: 360px;
     }
-
   }
 
   h1 {
@@ -73,6 +78,17 @@ main {
 
     @include mobile {
       font-size: 24px;
+    }
+  }
+
+  .main__menu-form__container {
+    @include flexCenter(row);
+    gap: 42px;
+
+    @include mobile {
+      @include flexCenter(column);
+      width: 100%;
+
     }
   }
 }

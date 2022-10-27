@@ -1,0 +1,275 @@
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content
+    }
+  }
+  
+  @mixin flexCenter($direction) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: $direction;
+  }
+
+  @mixin selectItem {
+    height: 48px;          
+    padding: 12px 12px 12px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(37, 51, 65, 0.3);
+    border-radius: 4px;
+    margin-top: 6px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color;
+    cursor: pointer;
+  }
+
+  .main__form--container {
+    @include flexCenter(row);
+    gap: 4px;
+    width: 776px;
+    height: 629px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin: auto;
+    padding: 32px 33px 42px 32px;
+
+    @include mobile {
+        @include flexCenter(row);
+        width: 360px;
+        height: 800px;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    &__input--container {
+        @include flexCenter(row);
+        margin-bottom: 20px;
+        gap: 20px;
+
+        @include mobile {
+            width: 350px;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        div {
+            
+            .label {
+                width: 109px;
+                height: 20px;
+                font-weight: 600;
+                font-size: 16px;
+                color: $text-color;
+
+                span {
+                    padding-left: 2px;
+                    color: #DB504A;
+                }
+            }
+        }
+
+        .select--item {
+            @include selectItem;
+            width: 320px;
+        }
+
+        i {
+            margin-top: 24px;
+            margin-left: 6px;
+            margin-right: 6px;
+            color: $primary-color;
+
+            @include mobile {
+                display: none;
+            }
+            
+        }
+    }
+
+    .three--inputs {
+        gap: 26px;
+
+        @include mobile {
+            gap: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .shipment--type {
+        width: 195px;
+        height: 48px;
+        border: 1px solid $error;
+        
+        @include mobile {
+            width: 184px;
+        }
+    }
+
+    .select--weight {
+        width: 195px;
+        height: 48px;
+        cursor: unset;
+
+        @include mobile {
+            width: 124px;
+        }
+    }
+
+    #deliverydate {
+        @include selectItem;
+        width: 264px;
+
+        @include mobile {
+            width: 320px;
+        }
+    }
+
+    #description {
+        @include selectItem;
+        width: 711px;
+        height: 120px;
+        padding: 12px 20px;
+        line-height: 150%;
+        text-align: justify;
+        cursor: unset;
+
+        @include mobile {
+            width: 320px;
+            height: 264px;
+        }
+    }
+
+    &__picture--container {
+        @include flexCenter(column);
+        align-items: flex-start;
+        margin-bottom: 32px;
+        margin-left: 32px;
+
+        @include mobile {
+            width: 350px;
+            margin-top: 20px;
+        }
+
+        .label--picture {
+            font-weight: 600;
+            font-size: 16px;
+            color: $text-color;
+            margin-bottom: 6px;
+        }
+
+        .image--box {
+            @include flexCenter(row);
+            gap: 12px;
+
+            div {
+                position: relative;
+
+                .fa-circle-xmark {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    color: $error;
+                    font-size: 24px;
+                    background-color: #FFFFFF;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        img {
+            width: 76px;
+            height: 76px;
+            border: 1px solid #E5E7EA;
+            border-radius: 4px;
+        }
+
+        .plus--box {
+            @include flexCenter(row);
+            width: 76px;
+            height: 76px;
+            border: 1px dashed $primary-color;
+            color: $primary-color;
+            border-radius: 4px;
+
+            i {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .line {
+        width: 776px;
+        height: 1px;
+        background-color: #F6F6F6;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__bottom--container {
+        @include flexCenter(row);
+        justify-content: flex-start;
+        margin-top: 32px;
+        margin-left: 32px;
+
+        @include mobile {
+           display: none;
+        }
+
+        .error--message {
+            @include flexCenter(row);
+            gap: 8px;
+
+            .error--sign {
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                background-color: $error;
+                border-radius: 50%;
+    
+                i {
+                    font-size: 12px;
+                    color: #ffffff;
+                }
+            }
+
+            .error--text {
+                font-weight: 600;
+                font-size: 16px;
+                color: $error;
+            }
+        }
+
+        .submit--button {
+            @include flexCenter(row);
+            gap: 8px;
+            width: 124px;
+            height: 44px;
+            margin-left: auto;
+            margin-right: 32px;
+            background-color: $primary-color;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+
+            .button--text {
+                font-weight: 700;
+                font-size: 15px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            i {
+                margin-top: 2px;
+                font-weight: 900;
+                font-size: 13px;
+            }
+        }
+
+    }
+  }
