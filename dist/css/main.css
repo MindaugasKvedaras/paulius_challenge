@@ -39,10 +39,81 @@
   }
 }
 .header__left--language-help__language {
+  width: 100px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Source Sans Pro";
+}
+.header__left--language-help__language .selected-lang {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  gap: 4px;
+  cursor: pointer;
+}
+.header__left--language-help__language .selected-lang:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background-image: url("https://flagicons.lipis.dev/flags/4x3/lt.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header__left--language-help__language ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.header__left--language-help__language ul li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.header__left--language-help__language ul li:hover {
+  background-color: #41C2D5;
+}
+.header__left--language-help__language ul li p {
+  text-decoration: none;
+  width: 125px;
+  padding: 5px 10px;
+  display: block;
+  color: #253341;
+  cursor: pointer;
+}
+.header__left--language-help__language ul li p:hover {
+  color: #ffffff;
+}
+.header__left--language-help__language ul li p:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header__left--language-help__language .lt:before {
+  background-image: url("https://flagicons.lipis.dev/flags/4x3/lt.svg");
+  width: 18px;
+  height: 14px;
+}
+.header__left--language-help__language .en:before {
+  background-image: url("https://flagicons.lipis.dev/flags/4x3/gb.svg");
+  width: 18px;
+  height: 14px;
 }
 .header__left--language-help__language img {
   width: 20px;
@@ -332,7 +403,7 @@
   }
 }
 .main__form--container__input--container div .label {
-  width: 109px;
+  width: 134px;
   height: 20px;
   font-weight: 600;
   font-size: 16px;
@@ -570,6 +641,10 @@
   border-radius: 4px;
   cursor: pointer;
 }
+.main__form--container__bottom--container .submit--button a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .main__form--container__bottom--container .submit--button .button--text {
   font-weight: 700;
   font-size: 15px;
@@ -671,6 +746,9 @@ body {
   background-color: #E5E5E5;
   line-height: 1;
   font-family: "Source Sans Pro";
+}
+body p {
+  margin-bottom: 0;
 }
 @media (max-width: 768px) {
   body {

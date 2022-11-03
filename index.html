@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/main.css" />
     <link rel="stylesheet" href="./assets/css/all.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
     <title>Paulius challenge</title>
   </head>
   <body>
@@ -14,17 +17,26 @@
       <div class="header__left">
         <div class="header__left--blue-circle"></div>
         <div class="header__left--language-help">
-          <select class="header__left--language-help__language">
-            <option value="LT">&#127473;&#127481; Lietuvių</option>
+          <div class="header__left--language-help__language">
+            <div id="change-selected-lang" class="selected-lang" onclick="togglelang()">
+              <p id="ltu">LT</p>
+              <i class="fa fa-chevron-down arrow"></i>
+            </div>
+            <ul id="lang-menu">
+              <li onclick="changelanglt()">
+                <p class="lt">Lietuvių</p>
+              </li>
+              <li onclick="changelangen()">
+                <p id="#eng" class="en">English</p>
+              </li>
+            </ul>
+          </div>
+          <!-- <select id="myselect" class="header__left--language-help__language">
+            <option class="lt" value="LT">&#127473;&#127481; Lietuvių</option>
             <option value="EN">🇬🇧 English</option>
-          </select>
-          <!-- <select class="header__left--language-help__language">
-            <option>
-              <p class="header--text"> <span><img src="./img/LT-flag.png" alt="LT-flag" class="flag" /></span>LT</p>
-              <i class="fa fa-chevron-down"></i>  
-            </option>
           </select> -->
-          <div class="header__left--language-help__help">
+
+         <div class="header__left--language-help__help">
             <i class="fa-regular fa-circle-question"></i>
             <p class="header--text">Pagalba</p>
             <i class="fa fa-chevron-down arrow"></i>
@@ -250,6 +262,28 @@
       </div>
     </main>
 
+    <script>
+      function togglelang() {
+        var x = document.getElementById("lang-menu");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
 
-  </body>
+      function changelangen(e) {
+        document.getElementById("ltu").innerText = "EN";
+        document.getElementById("change-selected-lang").style.backgroundImage = "https://flagicons.lipis.dev/flags/4x3/gb.svg";
+        document.getElementById("lang-menu").style.display = "none";
+      }
+
+      function changelanglt(e) {
+        document.getElementById("ltu").innerText = "LT";
+        document.getElementById("lang-menu").style.display = "none";
+      }
+
+
+    </script>
+ </body>
 </html>

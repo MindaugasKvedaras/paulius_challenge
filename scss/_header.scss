@@ -46,7 +46,109 @@
         }
 
         &__language {
-            @include flexCenter(row);
+            // @include flexCenter(row);
+
+            // option:checked {
+            //     display: none;
+            // }
+            // width: 100px;
+            // text-align: center;
+            // background-color: transparent;
+            // appearance: none;
+            // outline: none;
+            // border: none;
+            // padding: 8px;
+            width: 100px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            // padding: 0 1em 0 0.5em;
+            font-family: 'Source Sans Pro';
+
+            .selected-lang {
+                display: flex;   
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                // text-align: center;
+                cursor: pointer;
+            }
+
+            .selected-lang:before{
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 14px;
+                background-image: url("https://flagicons.lipis.dev/flags/4x3/lt.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                display: none;
+                background-color: #fff;
+                border: 1px solid #f8f8f8;
+                position: absolute;
+                top: 25px;
+                right: -15px;
+                width: 125px;
+                border-radius: 5px;
+                box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+            
+                li {
+                    list-style: none;
+                    text-align: left;
+                    display: flex;
+                    justify-content: space-between;
+
+                &:hover{
+                    background-color: $primary-color;
+                }    
+
+                    p {
+                        text-decoration: none;
+                        width: 125px;
+                        padding: 5px 10px;
+                        display: block;
+                        color: $text-color;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: #ffffff;
+                        }
+                        
+                        &:before{
+                            content: '';
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            vertical-align: middle;
+                            margin-right: 10px;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+
+            .lt:before {
+                background-image: url("https://flagicons.lipis.dev/flags/4x3/lt.svg");
+                width: 18px;
+                height: 14px;
+            }
+
+            .en:before {
+                background-image: url("https://flagicons.lipis.dev/flags/4x3/gb.svg");
+                width: 18px;
+                height: 14px;
+            }
+
+            // &:hover ul {
+            //     display: block;
+            // }
 
             img {
                 width: 20px;
@@ -58,6 +160,7 @@
                 @include arrwoIcon;
             } 
         }
+
 
         &__help {
             @include flexCenter(row);

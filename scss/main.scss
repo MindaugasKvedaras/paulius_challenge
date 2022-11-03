@@ -33,6 +33,10 @@ body {
     line-height: 1;
     font-family: 'Source Sans Pro';
 
+    p {
+      margin-bottom: 0;
+    }
+
     @include mobile {
       background-color: #ffffff;
     }
