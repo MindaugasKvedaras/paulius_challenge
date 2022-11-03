@@ -305,11 +305,13 @@
                 }
 
                 .icon1 {
-                    @include icon(46px);
+                    @include icon(56px);
+                    color: #ffffff;
                 }
     
                 .icon2 {
-                    @include icon(28px);
+                    @include icon(30px);
+                    color: #ffffff;
                 }
             }
 
