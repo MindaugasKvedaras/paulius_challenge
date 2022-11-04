@@ -65,8 +65,12 @@ main {
 
   @include mobile {
     width: 100%;
+<<<<<<< HEAD
     height: 1380px;
     margin-bottom: 15px;
+=======
+    // margin-bottom: 15px;
+>>>>>>> f289d8e89c3bf88fa5ab08160218bccfdfc0ded0
   }
 
   .main__heading {
@@ -99,9 +103,9 @@ main {
     @include mobile {
       @include flexCenter(column);
       gap: 30px;
-      width: 370px;
+      width: 380px;
       margin: auto;
-      margin-top: 0;
+      margin-top: 10px;
       // position: relative;
       // width: 100%;
 
