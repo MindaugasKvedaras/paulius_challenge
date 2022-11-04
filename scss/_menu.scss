@@ -55,6 +55,7 @@
         @include mobile {
             @include flexCenter(row);
             gap: 4px;
+            height: 75px;
         }    
     }
 

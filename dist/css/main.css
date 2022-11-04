@@ -218,6 +218,7 @@
     align-items: center;
     flex-direction: row;
     gap: 4px;
+    height: 75px;
   }
 }
 .main__menu__items--item {
