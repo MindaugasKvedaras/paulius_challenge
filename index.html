@@ -272,13 +272,22 @@
         }
       }
 
-      function changelangen(e) {
+      function changelangen() {
+        let flag = document.getElementById("change-selected-lang");
+        let flag_change = window.getComputedStyle(flag, '::before');
+        console.log(flag_change.backgroundImage);
+        flag.style.setProperty('--flag', 'url("https://flagicons.lipis.dev/flags/4x3/gb.svg")');
+        
         document.getElementById("ltu").innerText = "EN";
-        document.getElementById("change-selected-lang").style.backgroundImage = "https://flagicons.lipis.dev/flags/4x3/gb.svg";
         document.getElementById("lang-menu").style.display = "none";
       }
 
-      function changelanglt(e) {
+      function changelanglt() {
+        let flag = document.getElementById("change-selected-lang");
+        let flag_change = window.getComputedStyle(flag, '::before');
+        console.log(flag_change.backgroundImage);
+        flag.style.setProperty('--flag', 'url("https://flagicons.lipis.dev/flags/4x3/lt.svg")');
+        
         document.getElementById("ltu").innerText = "LT";
         document.getElementById("lang-menu").style.display = "none";
       }

@@ -58,7 +58,7 @@
   display: inline-block;
   width: 18px;
   height: 14px;
-  background-image: url("https://flagicons.lipis.dev/flags/4x3/lt.svg");
+  background-image: var(--flag, url("https://flagicons.lipis.dev/flags/4x3/lt.svg"));
   background-size: contain;
   background-repeat: no-repeat;
 }
