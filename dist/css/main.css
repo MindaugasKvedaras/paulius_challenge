@@ -242,7 +242,7 @@
   .main__menu__items--item {
     flex-direction: column;
     font-size: 13px;
-    height: 80px;
+    height: 100px;
     width: 100%;
     background-color: #ffffff;
     text-align: center;
