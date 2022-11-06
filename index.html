@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/main.css" />
     <link rel="stylesheet" href="./assets/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+        
     <title>Paulius challenge</title>
   </head>
   <body>
@@ -46,217 +43,225 @@
     </header>
 
     <main>
-      <div class="main__heading">
-        <h1>Siuntos užsakymas</h1>
-      </div>
-      <div class="main__menu-form__container">
-        <div class="main__menu">
-          <div class="main__menu__items">
-            <div class="main__menu__items--item active">
-              <div class="mobile-number__active">
-                <p>1</p>
-              </div>
-              <p class="desktop-text">1.</p>
-              <p>Siuntos informacija</p>
-              <i class="fa-light fa-angle-right"></i>
-            </div>
-            <div class="main__menu__items--item">
-              <div class="mobile-number__grey">
-                <p>2</p>
-              </div>
-              <p class="desktop-text">2.</p>
-              <p class="faint-text">Siuntėjas</p>
-            </div>
-            <div class="main__menu__items--item">
-              <div class="mobile-number__grey">
-                <p>3</p>
-              </div>
-              <p class="desktop-text">3.</p>
-              <p class="faint-text">Gavėjas</p>
-            </div>
-            <div class="main__menu__items--item">
-              <div class="mobile-number__grey">
-                <p>4</p>
-              </div>
-              <p class="desktop-text">4.</p>
-              <p class="faint-text">Apmokėjimas</p>
-            </div>
-          </div>
-          <div class="main__menu__information">
-            <div class="main__menu__information--box">
-              <i class="fas fa-info icon1"></i>
-              <p>
-                Siuntą <span>virš 30 kg būtinai pakuokite</span> į dvi mažesnes
-                pakuotes, nes kaina nuo pakuočių skaičiaus nesikeičia.
-              </p>
-            </div>
-            <div class="main__menu__information--box">
-              <i class="fas fa-info icon2"></i>
-              <p>
-                Siuntos dalinamos/renkamos trečiadienį darbo valandomis <br />
-                Vairuotojas su Jumis susisieks 1 valandą prieš atvykdamas.
-              </p>
-            </div>
-          </div>
+      <div class="main__container">
+        <div class="main__heading">
+          <h1>Siuntos užsakymas</h1>
         </div>
-
-        <div class="main__form--container">
-          <form action="">
-            <div class="main__form--container__input--container">
-              <div>
-                <label for="senderadress" class="label">
-                  Paėmimo šalis<span class="mandatory">*</span>
-                </label>
-                <br />
-                <select
-                  id="sendercountry"
-                  name="sendercountry"
-                  class="select--item"
-                >
-                  <option value="lithuania" class="option-text">Lietuva</option>
-                  <option value="latvia" class="option-text">Latvija</option>
-                </select>
+        <div class="main__menu-form__container">
+          <div class="main__menu">
+            <div class="main__menu__items">
+              <div class="main__menu__items--item active">
+                <div class="mobile-number__active">
+                  <p>1</p>
+                </div>
+                <p class="desktop-text">1.</p>
+                <p>Siuntos informacija</p>
+                <i class="fa-light fa-angle-right"></i>
               </div>
-              <i class="fa-regular fa-arrow-right"></i>
-              <div>
-                <label for="deliveryaddress" class="label">
-                  Pristatymo šalis<span class="mandatory"> *</span>
-                </label>
-                <br />
-                <select
-                  id="deliveryaddress"
-                  name="deliveryaddress"
-                  class="select--item"
-                >
-                  <option value="norway" class="option-text">
-                    Norvegija
-                  </option>
-                  <option value="sweden" class="option-text">
-                    Švedija
-                  </option>
-                </select>
-              </div>            
+              <div class="main__menu__items--item">
+                <div class="mobile-number__grey">
+                  <p>2</p>
+                </div>
+                <p class="desktop-text">2.</p>
+                <p class="faint-text">Siuntėjas</p>
+              </div>
+              <div class="main__menu__items--item">
+                <div class="mobile-number__grey">
+                  <p>3</p>
+                </div>
+                <p class="desktop-text">3.</p>
+                <p class="faint-text">Gavėjas</p>
+              </div>
+              <div class="main__menu__items--item">
+                <div class="mobile-number__grey">
+                  <p>4</p>
+                </div>
+                <p class="desktop-text">4.</p>
+                <p class="faint-text">Apmokėjimas</p>
+              </div>
             </div>
-
-            <div class="main__form--container__input--container three--inputs">
-              <div>
-                <label for="date" class="label">
-                  Siuntimo data<span class="mandatory"> *</span>
-                </label>
-                <br />
-                <input type="date" id="deliverydate" name="deliverydate" />
+            <div class="main__menu__information">
+              <div class="main__menu__information--box">
+                <i class="fas fa-info icon1"></i>
+                <p>
+                  Siuntą <span>virš 30 kg būtinai pakuokite</span> į dvi mažesnes
+                  pakuotes, nes kaina nuo pakuočių skaičiaus nesikeičia.
+                </p>
               </div>
-              <div>
-                <label for="shipment" class="label">
-                  Siuntos tipas<span class="mandatory"> *</span>
-                </label>
-                <br />
-                <select
-                  id="shipment"
-                  name="shipment"
-                  class="select--item shipment--type"
-                >
-                  <option
-                    value=""
-                    disabled
-                    selected
-                    hidden
-                    className="option-text disabled"
+              <div class="main__menu__information--box">
+                <i class="fas fa-info icon2"></i>
+                <p>
+                  Siuntos dalinamos/renkamos trečiadienį darbo valandomis <br />
+                  Vairuotojas su Jumis susisieks 1 valandą prieš atvykdamas.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="main__form--container">
+            <form action="">
+              <div class="main__form--container__input--container">
+                <div>
+                  <label for="senderadress" class="label">
+                    Paėmimo šalis<span class="mandatory">*</span>
+                  </label>
+                  <br />
+                    <select
+                    id="sendercountry"
+                    name="sendercountry"
+                    class="select--item"
                   >
-                    Pasirinkite
-                  </option>
-                  <option value="fast" class="option-text">
-                    Skubus
-                  </option>
-                  <option value="regular" class="option-text">
-                    Įprastas
-                  </option>
-                </select>
-              </div>
-              <div>
-                <label for="weight" class="label">
-                  Svoris (kg)<span class="mandatory"> *</span>
-                </label>
-                <br />
-                <input
-                  type="number"
-                  id="weight"
-                  name="weight"
-                  class="select--item select--weight"
-                />
-              </div>
-            </div>
-
-            <div class="main__form--container__input--container">
-              <div>
-                <label for="description" class="label">
-                  Siuntos aprašymas
-                </label><br/>
-                <textarea id="description" name="description" minLength="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </textarea>
-              </div>
-            </div>
-
-            <div class="main__form--container__picture--container">
-              <div>
-                <p class="label--picture">Siuntos nuotraukos</p>
-              </div>
-              <div class="image--box">
+                      <option value="lithuania" class="option-text">Lietuva</option>
+                      <option value="latvia" class="option-text">Latvija</option>
+                    </select>
+  
+                </div>
+                <i class="fa-regular fa-arrow-right"></i>
                 <div>
-                  <img src="./img/box.jpg" alt="box"/>
-                  <i class="fal fa-circle-xmark"></i>                
+                  <label for="deliveryaddress" class="label">
+                    Pristatymo šalis<span class="mandatory"> *</span>
+                  </label>
+                  <br />
+                  <select
+                    id="deliveryaddress"
+                    name="deliveryaddress"
+                    class="select--item"
+                  >
+                    <option value="norway" class="option-text">
+                      Norvegija
+                    </option>
+                    <option value="sweden" class="option-text">
+                      Švedija
+                    </option>
+                  </select>
+                </div>            
+              </div>
+  
+              <div class="main__form--container__input--container three--inputs">
+                <div>
+                  <label for="date" class="label">
+                    Siuntimo data<span class="mandatory"> *</span>
+                  </label>
+                  <br />
+                  <input type="date" id="deliverydate" name="deliverydate" />
+                </div>
+                <div class="two-col">
+                  <div>
+                    <label for="shipment" class="label">
+                      Siuntos tipas<span class="mandatory"> *</span>
+                    </label>
+                    <br />
+                    <select
+                      id="shipment"
+                      name="shipment"
+                      class="select--item shipment--type"
+                    >
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        hidden
+                        className="option-text disabled"
+                      >
+                        Pasirinkite
+                      </option>
+                      <option value="fast" class="option-text">
+                        Skubus
+                      </option>
+                      <option value="regular" class="option-text">
+                        Įprastas
+                      </option>
+                    </select>
+                  </div>
+                  
+                  <div class="weight--container">
+                    <label for="weight" class="label">
+                      Svoris (kg)<span class="mandatory"> *</span>
+                    </label>
+                    <br />
+                    <input
+                      type="number"
+                      id="weight"
+                      name="weight"
+                      class="select--item select--weight"
+                    />
+                  </div>
+                </div>
+                
+              </div>
+  
+              <div class="main__form--container__input--container">
+                <div>
+                  <label for="description" class="label">
+                    Siuntos aprašymas
+                  </label><br/>
+                  <textarea id="description" name="description" minLength="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </textarea>
+                </div>
+              </div>
+  
+              <div class="main__form--container__picture--container">
+                <div>
+                  <p class="label--picture">Siuntos nuotraukos</p>
+                </div>
+                <div class="image--box">
+                  <div>
+                    <img src="./img/box.jpg" alt="box"/>
+                    <i class="fal fa-circle-xmark"></i>                
+                  </div>
+                  <div>
+                    <div class="plus--box">
+                      <i class="fa-solid fa-plus"></i>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+  
+            <div class="line"></div>
+  
+            <div class="main__form--container__bottom--container">
+              <div class="error--message">
+                <div class="error--sign">
+                  <i class="fa-solid fa-exclamation"></i>              
                 </div>
                 <div>
-                  <div class="plus--box">
-                    <i class="fa-solid fa-plus"></i>
-                  </div>  
+                  <p class="error--text">Prašome pasirinkti siuntos tipą</p>
                 </div>
               </div>
-            </div>
-
-          <div class="line"></div>
-
-          <div class="main__form--container__bottom--container">
-            <div class="error--message">
-              <div class="error--sign">
-                <i class="fa-solid fa-exclamation"></i>              
+  
+              <div class="submit--button">
+                <a class="button--text">Pirmyn</a>
+                <i class="fa-light fa-angle-right"></i>
               </div>
-              <div>
-                <p class="error--text">Prašome pasirinkti siuntos tipą</p>
+            </div>  
+            </form>
+  
+            <div class="mobile--information">
+              <div class="mobile--information--box">
+                <i class="fas fa-info icon1"></i>
+                <p>
+                  Siuntą <span>virš 30 kg būtinai pakuokite</span> į dvi mažesnes
+                  pakuotes, nes kaina nuo pakuočių skaičiaus nesikeičia.
+                </p>
+              </div>
+              <div class="mobile--information--box">
+                <i class="fas fa-info icon2"></i>
+                <p>
+                  Siuntos dalinamos/renkamos trečiadienį darbo valandomis <br />
+                  Vairuotojas su Jumis susisieks 1 valandą prieš atvykdamas.
+                </p>
               </div>
             </div>
-
-            <div class="submit--button">
+  
+            <div class="submit--button__mobile">
               <a class="button--text">Pirmyn</a>
               <i class="fa-light fa-angle-right"></i>
             </div>
-          </div>  
-          </form>
-
-          <div class="mobile--information">
-            <div class="mobile--information--box">
-              <i class="fas fa-info icon1"></i>
-              <p>
-                Siuntą <span>virš 30 kg būtinai pakuokite</span> į dvi mažesnes
-                pakuotes, nes kaina nuo pakuočių skaičiaus nesikeičia.
-              </p>
-            </div>
-            <div class="mobile--information--box">
-              <i class="fas fa-info icon2"></i>
-              <p>
-                Siuntos dalinamos/renkamos trečiadienį darbo valandomis <br />
-                Vairuotojas su Jumis susisieks 1 valandą prieš atvykdamas.
-              </p>
-            </div>
-          </div>
-
-          <div class="submit--button__mobile">
-            <a class="button--text">Pirmyn</a>
-            <i class="fa-light fa-angle-right"></i>
           </div>
         </div>
+      </main>
       </div>
-    </main>
+      
 
     <script>
       function togglelang() {

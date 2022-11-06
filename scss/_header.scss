@@ -21,7 +21,7 @@
 
 .header__left {
     @include flexCenter(row);
-    gap: 92px;
+    gap: 82px;
     margin-top: 24px;;
     margin-left: 48px;
 
@@ -39,31 +39,18 @@
 
     &--language-help {
         @include flexCenter(row);
-        gap: 24px;
+        gap: 16px;
 
         @include mobile {
             gap: 12px;
         }
 
         &__language {
-            // @include flexCenter(row);
-
-            // option:checked {
-            //     display: none;
-            // }
-            // width: 100px;
-            // text-align: center;
-            // background-color: transparent;
-            // appearance: none;
-            // outline: none;
-            // border: none;
-            // padding: 8px;
             width: 100px;
             position: relative;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 14px;
-            // padding: 0 1em 0 0.5em;
             font-family: 'Source Sans Pro';
 
             .selected-lang {
@@ -71,7 +58,6 @@
                 justify-content: center;
                 align-items: center;
                 gap: 4px;
-                // text-align: center;
                 cursor: pointer;
             }
 
@@ -145,10 +131,6 @@
                 width: 18px;
                 height: 14px;
             }
-
-            // &:hover ul {
-            //     display: block;
-            // }
 
             img {
                 width: 20px;
