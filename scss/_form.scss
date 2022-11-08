@@ -408,22 +408,14 @@
                     color: $text-color;
                     margin: 0;
     
-                    span {
-                        font-weight: 700;
-                        color: $text-color
-                    }
                 }
 
-                .icon1 {
-                    @include icon(20px);
+                .icon {
+                    @include icon(16px);
                     color: #ffffff;
+                    padding-left: 0;
                 }
     
-                .icon2 {
-                    @include icon(20px);
-                    color: #ffffff;
-                }
-
                 &:nth-child(2) {
 
                     p {
@@ -438,40 +430,45 @@
     }
 
     .bottom--container__mobile {
-        @include flexCenter(row);
-        justify-content: flex-start;
-        width: 100%;
-        margin-bottom: 18px;
-        margin-top: 18px;
+        display: none;
 
-        .error--mobile {
+        @include mobile {
             @include flexCenter(row);
             justify-content: flex-start;
-            gap: 8px;
+            width: 100%;
+            margin-bottom: 18px;
+            margin-top: 18px;
     
-            .error--sign {
-                position: relative;
-                width: 16px;
-                height: 16px;
-                text-align: center;
-                background-color: $error;
-                border-radius: 50%;
-    
-                i {
-                    position: absolute;
-                    top: 4px;
-                    left: 7px;
-                    font-size: 8px;
-                    color: #ffffff;
+            .error--mobile {
+                @include flexCenter(row);
+                justify-content: flex-start;
+                gap: 8px;
+        
+                .error--sign {
+                    position: relative;
+                    width: 16px;
+                    height: 16px;
+                    text-align: center;
+                    background-color: $error;
+                    border-radius: 50%;
+        
+                    i {
+                        position: absolute;
+                        top: 4px;
+                        left: 7px;
+                        font-size: 8px;
+                        color: #ffffff;
+                    }
                 }
+        
+                .error--text {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: $error;
+                }
+                
             }
-    
-            .error--text {
-                font-weight: 600;
-                font-size: 16px;
-                color: $error;
-            }
-            
+        
         }
     
     }
