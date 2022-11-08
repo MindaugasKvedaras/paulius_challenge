@@ -13,12 +13,15 @@
 
 @mixin icon($width) {
     width: $width;
-    height: 20px;
+    height: 16px;
     background-color: $primary-color;
     text-align: center;
-    padding-top: 6px;
+    padding-left: 5px;
+    font-weight: 700;
     font-size: 8px;
     margin-top: 6px;
+    margin-right: 4px;;
+    line-height: 18px;
     border-radius: 50%;
 }
 
@@ -26,10 +29,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    font-weight: 700;
-    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    font-weight: 600;
+    font-size: 16px;
     padding: 8px;
     color: #ffffff;
     text-align: center;
@@ -40,9 +43,10 @@
 .main__menu {
     @include flexCenter(column);
     justify-content: flex-start;
-    width: 33.3%;
-    height: 629px;
-    gap: 42px;
+    width: 30.3%;
+    flex: 0 0 auto;
+    gap: 20px;
+    // padding: 0 12px;
     
     @include mobile {
         width: 100%;
@@ -68,13 +72,14 @@
         align-items: center;
         gap: 8px;
         width: 100%;
-        height: 52px;
+        // height: 52px;
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 12px;
         border-radius: 4px;
-        padding:  16px;
-        margin: 0;
+        padding:  12px;
+        line-height: 24px;
+        // margin: 0;
         color: $text-color;
         cursor: pointer;
 
@@ -89,9 +94,11 @@
     }
 
     i {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: auto;
         color: #ffffff;
+        padding-right: 6px;
+        font-weight: 400;
 
         @include mobile {
             display: none;
@@ -124,7 +131,7 @@
             display: flex;
             padding: 12px;
             gap: 8px;
-            border: 1px solid $primary-color;
+            border: 1px solid rgba(65,  194, 213, 0.38);
             border-radius: 4px;
             width: 100%;
             background-color: rgba(65, 194, 213, 0.12);
@@ -142,12 +149,16 @@
                 }
             }
 
+            .two--paragraphs p:first-child {
+                margin-bottom: 8px;
+            }
+
             .icon1 {
-                @include icon(46px);
+                @include icon(28px);
             }
 
             .icon2 {
-                @include icon(28px);
+                @include icon(20px);
             }
         }
 
@@ -158,6 +169,8 @@
     }
 
     .desktop-text {
+        margin-right: 10px;
+        margin-left: 6px;
         @include mobile {
             display: none;
         }
